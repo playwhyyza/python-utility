@@ -13,11 +13,21 @@ full_word = [] #keep full word for export to text
 
 #FT = open("text.txt","r+",encoding="utf-8") # open file with unicode
 
-FT = open(sys.argv[1],"r+") # open file with argument
+# open file with argument
 
-for line in FT:
-    word = (line.split("#"))
-    next_word.append(word[1]) # select position of word to append into list next_word
+try:
+    FT = open(sys.argv[1],"r+")
+    for line in FT:
+        word = line.split("#")
+        print (word)
+        next_word.append(word[1]) # select position of word to append into list next_word
+except:
+    FT = open(sys.argv[1],"r+",encoding="utf-8")
+    for line in FT:
+        word = line.split("#")
+        print (word)
+        next_word.append(word[1]) # select position of word to append into list next_word
+
 
 for i in next_word:
     full_word.append(first_word + i)
