@@ -1,6 +1,6 @@
 #translation https://www.facebook.com/pages/Pondloso-Fansub
 #create by playwhyyza
-#24/10/2016
+#24/10/2016 2:45
 
 #sample word = https://กกกกกกกกmega.nz/#!6MYQBCDC!wlBwDqnx3yHCTjwekjWwTpdJwBZlum5hymqXU9Lw1f0
 
