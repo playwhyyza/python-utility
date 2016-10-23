@@ -1,6 +1,6 @@
 #translation https://www.facebook.com/pages/Pondloso-Fansub
 #create by playwhyyza
-#24/10/2016 2:45
+#24/10/2016
 
 #sample word = https://กกกกกกกกmega.nz/#!6MYQBCDC!wlBwDqnx3yHCTjwekjWwTpdJwBZlum5hymqXU9Lw1f0
 
@@ -13,10 +13,10 @@ full_word = [] #keep full word for export to text
 
 #FT = open("text.txt","r+",encoding="utf-8") # open file with unicode
 
-FT = open(sys.argv[1],"r+",encoding="utf-8") # open file with argument
+FT = open(sys.argv[1],"r+") # open file with argument
 
 for line in FT:
-    word = line.split("#")
+    word = (line.split("#"))
     next_word.append(word[1]) # select position of word to append into list next_word
 
 for i in next_word:
