@@ -19,13 +19,13 @@ try:
     FT = open(sys.argv[1],"r+")
     for line in FT:
         word = line.split("#")
-        print (word)
+        #print (word)
         next_word.append(word[1]) # select position of word to append into list next_word
 except:
     FT = open(sys.argv[1],"r+",encoding="utf-8")
     for line in FT:
         word = line.split("#")
-        print (word)
+        #print (word)
         next_word.append(word[1]) # select position of word to append into list next_word
 
 
