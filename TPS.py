@@ -18,13 +18,13 @@ full_word = [] #keep full word for export to text
 try:
     FT = open(sys.argv[1],"r+")
     for line in FT:
-        word = line.split("#")
+        word = line.split("!",1)
         #print (word)
         next_word.append(word[1]) # select position of word to append into list next_word
 except:
     FT = open(sys.argv[1],"r+",encoding="utf-8")
     for line in FT:
-        word = line.split("#")
+        word = line.split("!",1)
         #print (word)
         next_word.append(word[1]) # select position of word to append into list next_word
 
