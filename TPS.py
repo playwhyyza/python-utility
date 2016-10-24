@@ -6,7 +6,7 @@
 
 import sys
 
-first_word = "https://mega.nz/#"
+first_word = "https://mega.nz/#!"
 
 next_word = [] #keep word behind sign (#)
 full_word = [] #keep full word for export to text
