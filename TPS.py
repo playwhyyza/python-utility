@@ -6,6 +6,8 @@
 
 import sys
 
+count = 0
+
 first_word = "https://mega.nz/#!"
 
 next_word = [] #keep word behind sign (#)
@@ -15,25 +17,23 @@ full_word = [] #keep full word for export to text
 
 # open file with argument
 
-try:
-    FT = open(sys.argv[1],"r+")
-    for line in FT:
-        word = line.split("!",1)
-        #print (word)
-        next_word.append(word[1]) # select position of word to append into list next_word
-except:
-    FT = open(sys.argv[1],"r+",encoding="utf-8")
+def split_word():
     for line in FT:
         word = line.split("!",1)
         #print (word)
         next_word.append(word[1]) # select position of word to append into list next_word
 
+try:
+    FT = open(sys.argv[1],"r+")
+    split_word()
+except:
+    FT = open(sys.argv[1],"r+",encoding="utf-8")
+    split_word()
 
 for i in next_word:
     full_word.append(first_word + i)
-
-for i in full_word:
-    print (i)
+    print (full_word[count])
+    count = count + 1
 
 FT.writelines("\n" + "==================Export==================" + "\n")
 
